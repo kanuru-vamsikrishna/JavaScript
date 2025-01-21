@@ -14,3 +14,5 @@ function makeNegative(num) {
 
 const result = makeNegative(-9)
 console.log("Result:", result)
+
+// -Math.abs(num) is an inbuilt method

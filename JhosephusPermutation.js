@@ -11,13 +11,23 @@
 
 function josephus(items,k){
   const result = [];
+  console.log(items, "items");
   
   let index = 0;
   
   while (items.length > 0) {
-    index = (index + (k - 1)) % items.length;
-    
+    console.log(items.length, "length");
+    console.log(index, "index1");
+    const one = index + (k - 1)
+    const two = items.length;
+    console.log(one, "one")
+    console.log(two, "two")
+    index = one % two;
+    console.log(index, "index2")
+    // console.log(items.splice(index, 1)[0], 'splice')
     result.push(items.splice(index, 1)[0]);
+    console.log(result, "result")
+    console.log(items, "items")
   }
   
   return result;
